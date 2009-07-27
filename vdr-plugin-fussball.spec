@@ -2,7 +2,7 @@
 %define plugin	fussball
 %define name	vdr-plugin-%plugin
 %define version	0.0.3b
-%define rel	13
+%define rel	14
 
 Summary:	VDR plugin: Displays table of the German Football(Soccer) League
 Name:		%name
