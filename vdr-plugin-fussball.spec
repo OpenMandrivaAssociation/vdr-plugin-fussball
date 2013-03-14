@@ -2,7 +2,7 @@
 %define plugin	fussball
 %define name	vdr-plugin-%plugin
 %define version	0.0.3b
-%define rel	15
+%define rel	16
 
 Summary:	VDR plugin: Displays table of the German Football(Soccer) League
 Name:		%name
@@ -12,7 +12,6 @@ Group:		Video
 License:	GPL+
 URL:		http://www.vdr-wiki.de/wiki/index.php/Fussball-plugin
 Source:		http://home.arcor.de/crystl/vdr-%plugin-%version.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
 Requires:	wget
@@ -32,21 +31,11 @@ perl -pi -e 's,/usr/local/bin/sort.pl,%{_bindir}/fussball-sort.pl,' scripte/erge
 %vdr_plugin_build
 
 %install
-rm -rf %{buildroot}
 %vdr_plugin_install
 
 install -d -m755 %{buildroot}%{_bindir}
 install -m755 scripte/*.sh %{buildroot}%{_bindir}
 install -m755 scripte/sort.pl %{buildroot}%{_bindir}/fussball-sort.pl
-
-%clean
-rm -rf %{buildroot}
-
-%post
-%vdr_plugin_post %plugin
-
-%postun
-%vdr_plugin_postun %plugin
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
