@@ -4,7 +4,7 @@
 Summary:	VDR plugin: Displays table of the German Football(Soccer) League
 Name:		vdr-plugin-%plugin
 Version:	0.0.3b
-Release:	17
+Release:	18
 Group:		Video
 License:	GPL+
 URL:		http://www.vdr-wiki.de/wiki/index.php/Fussball-plugin
