@@ -7,7 +7,7 @@ Version:	0.0.3b
 Release:	18
 Group:		Video
 License:	GPL+
-URL:		http://www.vdr-wiki.de/wiki/index.php/Fussball-plugin
+URL:		https://www.vdr-wiki.de/wiki/index.php/Fussball-plugin
 Source:		http://home.arcor.de/crystl/vdr-%plugin-%{version}.tar.bz2
 BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
